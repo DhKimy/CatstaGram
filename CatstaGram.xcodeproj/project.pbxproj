@@ -15,6 +15,7 @@
 		C969860A295D88A800C542C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9698608295D88A800C542C5 /* LaunchScreen.storyboard */; };
 		C9698612295D91CB00C542C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698611295D91CB00C542C5 /* LoginViewController.swift */; };
 		C9698614295D950800C542C5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698613295D950800C542C5 /* SignupViewController.swift */; };
+		C9698616295DCD1500C542C5 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698615295DCD1500C542C5 /* colorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C969860B295D88A800C542C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9698611295D91CB00C542C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C9698613295D950800C542C5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		C9698615295DCD1500C542C5 /* colorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		C96985F1295D88A600C542C5 = {
 			isa = PBXGroup;
 			children = (
+				C9698615295DCD1500C542C5 /* colorExtension.swift */,
 				C96985FC295D88A600C542C5 /* CatstaGram */,
 				C96985FB295D88A600C542C5 /* Products */,
 			);
@@ -147,6 +150,7 @@
 				C9698612295D91CB00C542C5 /* LoginViewController.swift in Sources */,
 				C9698602295D88A600C542C5 /* ViewController.swift in Sources */,
 				C9698614295D950800C542C5 /* SignupViewController.swift in Sources */,
+				C9698616295DCD1500C542C5 /* colorExtension.swift in Sources */,
 				C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */,
 				C9698600295D88A600C542C5 /* SceneDelegate.swift in Sources */,
 			);

@@ -423,7 +423,6 @@
                                             <attributes>
                                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="NotoSansKR-Medium"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -548,6 +547,7 @@
                         <outlet property="nameTextField" destination="3xf-Np-CjB" id="3qB-sA-5fb"/>
                         <outlet property="nicknameTextField" destination="VL8-gv-QcT" id="96k-Va-S8Q"/>
                         <outlet property="passwordTextField" destination="9wp-X6-eoC" id="cG6-nX-7CM"/>
+                        <outlet property="signupButton" destination="eKU-by-QuG" id="zZI-YN-6qA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjV-oO-3Sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

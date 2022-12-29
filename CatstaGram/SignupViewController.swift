@@ -11,10 +11,28 @@ class SignupViewController: UIViewController {
 
     // MARK: - Properties
     // 유효성 검사를 위한 프로퍼티
-    var isValidEmail = false
-    var isValidName = false
-    var isValidNickname = false
-    var isValidPassword = false
+    var isValidEmail = false {
+        didSet { // 세팅이 되고 난 후에 코드블럭을 실행
+            self.validateUserInfo()
+        }
+    }
+    var isValidName = false{
+        didSet { // 세팅이 되고 난 후에 코드블럭을 실행
+            self.validateUserInfo()
+        }
+    }
+    
+    var isValidNickname = false{
+        didSet { // 세팅이 되고 난 후에 코드블럭을 실행
+            self.validateUserInfo()
+        }
+    }
+    
+    var isValidPassword = false{
+        didSet { // 세팅이 되고 난 후에 코드블럭을 실행
+            self.validateUserInfo()
+        }
+    }
     
     // MARK: - TextField
     
@@ -22,6 +40,9 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var signupButton: UIButton!
+    
     
     // 연산프로퍼티로 텍스트 필드에 순차적으로 접근할 수 있도록 함
     var textField: [UITextField] {
@@ -43,13 +64,13 @@ class SignupViewController: UIViewController {
         
         switch sender {
         case emailTextField:
-            print("email")
+            self.isValidEmail = text.isVaildEmail()
         case nameTextField:
-            print("name")
+            self.isValidName = text.count > 2
         case nicknameTextField:
-            print("닉네임")
+            self.isValidNickname = text.count > 2
         case passwordTextField:
-            print("비번")
+            self.isValidPassword = text.isVaildPassword()
         default:
             fatalError("텍스트 필드 존재하지 않음")
         }
@@ -61,6 +82,25 @@ class SignupViewController: UIViewController {
         textField.forEach({ tf in
             tf.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
         })
+    }
+    
+    // 사용자가 입력한 회원정보를 확인하고 UI 업데이트
+    private func validateUserInfo() {
+        
+        if isValidEmail && isValidName && isValidNickname && isValidPassword {
+            self.signupButton.isEnabled = true
+            // 애니메이션 추가하는 것
+            UIView.animate(withDuration: 0.33) {
+                self.signupButton.backgroundColor = UIColor.facebookColor
+            }
+        } else {
+            self.signupButton.isEnabled = false
+            UIView.animate(withDuration: 0.33) {
+                self.signupButton.tintColor = UIColor.white
+                self.signupButton.backgroundColor = UIColor.disabledButtonColor
+                
+            }
+        }
         
     }
 }
@@ -69,7 +109,7 @@ class SignupViewController: UIViewController {
 extension String {
     // 대문자, 소문자, 특수문자, 숫자 확인. 8자 이상일 때 True를 리턴함.
     func isVaildPassword() -> Bool {
-        let regularExpression = "^(?=.*[a-z])(?=.*[A-Z](?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
+        let regularExpression = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
         let passwordValidation = NSPredicate.init(format: "SELF MATCHES %@", regularExpression)
         
         return passwordValidation.evaluate(with: self)
