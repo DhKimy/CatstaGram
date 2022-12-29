@@ -92,6 +92,7 @@ class SignupViewController: UIViewController {
             // 애니메이션 추가하는 것
             UIView.animate(withDuration: 0.33) {
                 self.signupButton.backgroundColor = UIColor.facebookColor
+                self.signupButton.tintColor = UIColor.white
             }
         } else {
             self.signupButton.isEnabled = false
