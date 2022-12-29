@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func signupButtonDidTap(_ sender: UIButton) {
         
+        /*
                 // 화면전환을 위해서는... (스토리보드에서 직접 연결하지 않고 버튼 -> controller로 가도록 코드 작업하는 방법)
         
                 // 1. 스토리보드를 생성
@@ -45,7 +46,7 @@ class LoginViewController: UIViewController {
         //        self.present(signupViewController, animated: true, completion: nil)
         
                 self.navigationController?.pushViewController(signupViewController, animated: true)
-        
+        */
         
     }
 }
