@@ -3,15 +3,16 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatstaGram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="CatstaGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,11 +27,17 @@
                                 <rect key="frame" x="10" y="405" width="370" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="passwordTextFieldEditingChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ibZ-Av-78U"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="e-mail" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NYR-Ve-dTb">
                                 <rect key="frame" x="10" y="361" width="370" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailTextFieldEditingChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="xf0-Lo-0Oy"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yid-1i-yCF">
                                 <rect key="frame" x="266" y="457" width="114" height="14"/>
@@ -66,12 +73,15 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swb-yr-iDW">
                                 <rect key="frame" x="10" y="511" width="370" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.96078431369999995" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="disabledButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="kca-cB-I58"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                <connections>
+                                    <action selector="loginButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0uz-2r-BtG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtm-RG-o7j">
                                 <rect key="frame" x="184.66666666666666" y="581" width="21" height="14"/>
@@ -102,9 +112,19 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jux-Pm-oAX">
-                                <rect key="frame" x="94.666666666666686" y="613" width="201" height="34.333333333333371"/>
+                                <rect key="frame" x="107" y="613" width="176" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="f.square.fill" catalog="system" title="Facebook으로 로그인"/>
+                                <buttonConfiguration key="configuration" style="plain" image="f.square.fill" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Facebook으로 로그인">
+                                            <attributes>
+                                                <font key="NSFont" size="14" name="NotoSansKR-Black"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="facebookColor"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWv-q9-8pm">
                                 <rect key="frame" x="114" y="786" width="162" height="28"/>
@@ -153,6 +173,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signupButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r5n-HM-q0b"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEJ-mD-qZo">
                                 <rect key="frame" x="26" y="770" width="338" height="1"/>
@@ -211,6 +234,12 @@
     <resources>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
+        <namedColor name="disabledButtonColor">
+            <color red="0.77647058823529413" green="0.87058823529411766" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="facebookColor">
+            <color red="0.25490196078431371" green="0.57647058823529407" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
