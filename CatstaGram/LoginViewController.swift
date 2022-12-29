@@ -32,7 +32,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signupButtonDidTap(_ sender: UIButton) {
+        
+                // 화면전환을 위해서는... (스토리보드에서 직접 연결하지 않고 버튼 -> controller로 가도록 코드 작업하는 방법)
+        
+                // 1. 스토리보드를 생성
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+                // 2. 뷰컨트롤러를 생성
+                let signupViewController = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupViewController
+        
+        //        // 3. 화면전환 메서드를 이용해 화면을 전환
+        //        self.present(signupViewController, animated: true, completion: nil)
+        
+                self.navigationController?.pushViewController(signupViewController, animated: true)
+        
+        
     }
-    
-    
 }
