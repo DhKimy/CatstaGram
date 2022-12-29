@@ -10,6 +10,13 @@ import UIKit
 class SignupViewController: UIViewController {
 
     // MARK: - Properties
+    var email: String = ""
+    var name: String = ""
+    var nickname: String = ""
+    var password: String = ""
+    
+    var userInfo: ((UserInfo) -> Void)?
+    
     // 유효성 검사를 위한 프로퍼티
     var isValidEmail = false {
         didSet { // 세팅이 되고 난 후에 코드블럭을 실행
@@ -54,7 +61,9 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         setupTextField()
         setupAttribute()
-        // Do any additional setup after loading the view.
+        
+        // bug fix
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     
@@ -66,16 +75,41 @@ class SignupViewController: UIViewController {
         switch sender {
         case emailTextField:
             self.isValidEmail = text.isVaildEmail()
+            self.email = text
         case nameTextField:
             self.isValidName = text.count > 2
+            self.name = text
         case nicknameTextField:
             self.isValidNickname = text.count > 2
+            self.nickname = text
         case passwordTextField:
             self.isValidPassword = text.isVaildPassword()
+            self.password = text
+            print("password")
         default:
             fatalError("텍스트 필드 존재하지 않음")
         }
     }
+    
+    @IBAction func signupButtonDidTap(_ sender: UIButton) {
+        
+        // 뒤로가기
+        self.navigationController?.popViewController(animated: true)
+        
+        let userInfo = UserInfo(
+            email: self.email,
+            name: self.name,
+            nickname: self.nickname,
+            password: self.password
+        )
+        self.userInfo?(userInfo)
+    }
+    
+    @IBAction func backButtonDidTap(_ sender: UIBarButtonItem) {
+        // 뒤로가기
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     // MARK: - Helpers
     // 입력되는 곳이 어딘지를 알려주는 용도

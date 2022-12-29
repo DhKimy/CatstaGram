@@ -18,6 +18,8 @@
 		C9698616295DCD1500C542C5 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698615295DCD1500C542C5 /* Color+Extension.swift */; };
 		C9698618295DD3CD00C542C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698617295DD3CD00C542C5 /* UIView+Extension.swift */; };
 		C969861A295DD4CE00C542C5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698619295DD4CE00C542C5 /* UIViewController+Extension.swift */; };
+		C969861C295DE94D00C542C5 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969861B295DE94D00C542C5 /* UserInfo.swift */; };
+		C969861E295DF44800C542C5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969861D295DF44800C542C5 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C9698615295DCD1500C542C5 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		C9698617295DD3CD00C542C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C9698619295DD4CE00C542C5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C969861B295DE94D00C542C5 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		C969861D295DF44800C542C5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +75,11 @@
 				C9698617295DD3CD00C542C5 /* UIView+Extension.swift */,
 				C9698619295DD4CE00C542C5 /* UIViewController+Extension.swift */,
 				C96985FF295D88A600C542C5 /* SceneDelegate.swift */,
+				C969861B295DE94D00C542C5 /* UserInfo.swift */,
 				C9698601295D88A600C542C5 /* ViewController.swift */,
 				C9698611295D91CB00C542C5 /* LoginViewController.swift */,
 				C9698613295D950800C542C5 /* SignupViewController.swift */,
+				C969861D295DF44800C542C5 /* TestViewController.swift */,
 				C9698603295D88A600C542C5 /* Main.storyboard */,
 				C9698606295D88A800C542C5 /* Assets.xcassets */,
 				C9698608295D88A800C542C5 /* LaunchScreen.storyboard */,
@@ -153,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C969861E295DF44800C542C5 /* TestViewController.swift in Sources */,
 				C969861A295DD4CE00C542C5 /* UIViewController+Extension.swift in Sources */,
 				C9698612295D91CB00C542C5 /* LoginViewController.swift in Sources */,
 				C9698618295DD3CD00C542C5 /* UIView+Extension.swift in Sources */,
@@ -160,6 +167,7 @@
 				C9698614295D950800C542C5 /* SignupViewController.swift in Sources */,
 				C9698616295DCD1500C542C5 /* Color+Extension.swift in Sources */,
 				C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */,
+				C969861C295DE94D00C542C5 /* UserInfo.swift in Sources */,
 				C9698600295D88A600C542C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
