@@ -242,6 +242,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zBT-rz-PTL"/>
+                    <connections>
+                        <outlet property="signupButton" destination="IWv-q9-8pm" id="k4R-kF-4Sx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -592,6 +595,7 @@
                         <outlet property="nameTextField" destination="3xf-Np-CjB" id="3qB-sA-5fb"/>
                         <outlet property="nicknameTextField" destination="VL8-gv-QcT" id="96k-Va-S8Q"/>
                         <outlet property="passwordTextField" destination="9wp-X6-eoC" id="cG6-nX-7CM"/>
+                        <outlet property="popToLoginButton" destination="W8G-qv-Jww" id="Xcz-SA-VXG"/>
                         <outlet property="signupButton" destination="eKU-by-QuG" id="zZI-YN-6qA"/>
                     </connections>
                 </viewController>

@@ -42,7 +42,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var signupButton: UIButton!
-    
+    @IBOutlet weak var popToLoginButton: UIButton!
     
     // 연산프로퍼티로 텍스트 필드에 순차적으로 접근할 수 있도록 함
     var textField: [UITextField] {
@@ -53,6 +53,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
+        setupAttribute()
         // Do any additional setup after loading the view.
     }
     
@@ -104,6 +105,29 @@ class SignupViewController: UIViewController {
         }
         
     }
+    
+    private func setupAttribute() {
+        // registerButton
+        
+        let text1 = "계정이 있으신가요?"
+        let text2 = "로그인"
+        
+        let font1 = UIFont.systemFont(ofSize: 13)
+        let font2 = UIFont.systemFont(ofSize: 13)
+        
+        let color1 = UIColor.darkGray
+        let color2 = UIColor.facebookColor
+        
+        let attributes = generateButtonAttribute(
+            self.popToLoginButton,
+            texts: text1, text2,
+            fonts: font1, font2,
+            colors: color1, color2)
+        
+        self.popToLoginButton.setAttributedTitle(attributes, for: .normal)
+
+    }
+    
 }
 
 // 정규표현식 기능확장
