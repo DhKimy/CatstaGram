@@ -151,7 +151,7 @@
                                             <attributes>
                                                 <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="NotoSansKR-Bold"/>
-                                                <font key="NSOriginalFont" size="12" name=".SFNS-Regular"/>
+                                                <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -167,7 +167,7 @@
                                             <attributes>
                                                 <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="NotoSansKR-Bold"/>
-                                                <font key="NSOriginalFont" size="12" name=".SFNS-Regular"/>
+                                                <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -183,7 +183,7 @@
                                             <attributes>
                                                 <color key="NSColor" red="0.25490196078431371" green="0.47843137254901957" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="NotoSansKR-Bold"/>
-                                                <font key="NSOriginalFont" size="12" name=".SFNS-Regular"/>
+                                                <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -250,6 +250,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.15384615384608" y="-28.436018957345969"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="hol-my-ID6">
+            <objects>
+                <viewController id="1Qd-Uk-s0A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cHk-eB-sPm">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qvk-g6-npG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="dVe-5j-DVk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1J-Gi-hW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="1700"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Y7y-NN-nhv">
+            <objects>
+                <viewController id="eYm-Df-5DY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOk-LP-mP4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kab-8f-dYG">
+                                <rect key="frame" x="0.0" y="47" width="390" height="46"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_catstagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KP7-83-aGh">
+                                        <rect key="frame" x="10" y="0.0" width="150" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="6RW-9q-K88"/>
+                                            <constraint firstAttribute="width" constant="150" id="uS5-AQ-qDb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="6md-4V-YA7">
+                                        <rect key="frame" x="276" y="10" width="104" height="26"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfL-4L-ifN">
+                                                <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="j21-jg-J48"/>
+                                                    <constraint firstAttribute="width" constant="26" id="tho-cS-7hw"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="ic_home_upload"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW7-yF-zVZ">
+                                                <rect key="frame" x="39" y="0.0" width="26" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="Ycx-GK-I7v"/>
+                                                    <constraint firstAttribute="width" constant="26" id="oWd-MF-0mi"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="ic_home_heart"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-X4-gXd">
+                                                <rect key="frame" x="78" y="0.0" width="26" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="0sC-AT-IYq"/>
+                                                    <constraint firstAttribute="height" constant="26" id="SU7-X7-HvB"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="ic_home_send"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="KP7-83-aGh" secondAttribute="bottom" id="C3W-Jx-Gtq"/>
+                                    <constraint firstItem="6md-4V-YA7" firstAttribute="top" secondItem="kab-8f-dYG" secondAttribute="top" constant="10" id="ESo-PD-cQF"/>
+                                    <constraint firstItem="KP7-83-aGh" firstAttribute="leading" secondItem="kab-8f-dYG" secondAttribute="leading" constant="10" id="K9f-s6-UcE"/>
+                                    <constraint firstItem="KP7-83-aGh" firstAttribute="top" secondItem="kab-8f-dYG" secondAttribute="top" id="VGd-zj-B9b"/>
+                                    <constraint firstAttribute="height" constant="46" id="dRO-YB-SSH"/>
+                                    <constraint firstAttribute="trailing" secondItem="6md-4V-YA7" secondAttribute="trailing" constant="10" id="oHS-T7-31K"/>
+                                    <constraint firstAttribute="bottom" secondItem="6md-4V-YA7" secondAttribute="bottom" constant="10" id="uhd-AM-NGP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Eqa-BK-PWS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kab-8f-dYG" firstAttribute="leading" secondItem="Eqa-BK-PWS" secondAttribute="leading" id="BhK-yP-tIy"/>
+                            <constraint firstItem="Eqa-BK-PWS" firstAttribute="trailing" secondItem="kab-8f-dYG" secondAttribute="trailing" id="PfM-Zr-vfb"/>
+                            <constraint firstItem="kab-8f-dYG" firstAttribute="centerX" secondItem="qOk-LP-mP4" secondAttribute="centerX" id="cuY-IA-Z1c"/>
+                            <constraint firstItem="kab-8f-dYG" firstAttribute="top" secondItem="Eqa-BK-PWS" secondAttribute="top" id="kAc-fc-tFa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="Wz5-mb-xnR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PP8-e8-21J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778.46153846153845" y="1699.7630331753553"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PaZ-UD-qjD">
+            <objects>
+                <tabBarController storyboardIdentifier="TapbarVC" id="8Ha-oY-4VS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FQB-eo-FMn">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eYm-Df-5DY" kind="relationship" relationship="viewControllers" id="M9z-UX-36f"/>
+                        <segue destination="1Qd-Uk-s0A" kind="relationship" relationship="viewControllers" id="Ot3-aI-VWf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rU9-OT-izD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="967"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="6Tp-Xo-rJC">
@@ -423,7 +535,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VL8-gv-QcT">
                                 <rect key="frame" x="10" y="441.33333333333331" width="370" height="34"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -433,7 +545,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wp-X6-eoC">
                                 <rect key="frame" x="10" y="483.33333333333331" width="370" height="33.999999999999943"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -484,7 +596,7 @@
                                             <attributes>
                                                 <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="NotoSansKR-Regular"/>
-                                                <font key="NSOriginalFont" metaFont="system" size="12"/>
+                                                <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -500,7 +612,7 @@
                                             <attributes>
                                                 <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="NotoSansKR-Regular"/>
-                                                <font key="NSOriginalFont" metaFont="system" size="12"/>
+                                                <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -524,7 +636,7 @@
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="NotoSansKR-Regular"/>
-                                                <font key="NSOriginalFont" metaFont="system" size="12"/>
+                                                <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -640,6 +752,9 @@
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
+        <image name="ic_home_heart" width="512" height="512"/>
+        <image name="ic_home_send" width="512" height="512"/>
+        <image name="ic_home_upload" width="512" height="512"/>
         <namedColor name="disabledButtonColor">
             <color red="0.77647058823529413" green="0.87058823529411766" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -650,7 +765,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

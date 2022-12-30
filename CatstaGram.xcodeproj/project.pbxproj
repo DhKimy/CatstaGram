@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C95F4234295ECDF8001B92DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95F4233295ECDF8001B92DA /* HomeViewController.swift */; };
 		C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96985FD295D88A600C542C5 /* AppDelegate.swift */; };
 		C9698600295D88A600C542C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96985FF295D88A600C542C5 /* SceneDelegate.swift */; };
 		C9698602295D88A600C542C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698601295D88A600C542C5 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C95F4233295ECDF8001B92DA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C96985FA295D88A600C542C5 /* CatstaGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatstaGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96985FD295D88A600C542C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96985FF295D88A600C542C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C95F4232295ECDE8001B92DA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C95F4233295ECDF8001B92DA /* HomeViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C96985F1295D88A600C542C5 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		C96985FC295D88A600C542C5 /* CatstaGram */ = {
 			isa = PBXGroup;
 			children = (
+				C95F4232295ECDE8001B92DA /* New Group */,
 				C96985FD295D88A600C542C5 /* AppDelegate.swift */,
 				C9698615295DCD1500C542C5 /* Color+Extension.swift */,
 				C9698617295DD3CD00C542C5 /* UIView+Extension.swift */,
@@ -166,6 +177,7 @@
 				C9698602295D88A600C542C5 /* ViewController.swift in Sources */,
 				C9698614295D950800C542C5 /* SignupViewController.swift in Sources */,
 				C9698616295DCD1500C542C5 /* Color+Extension.swift in Sources */,
+				C95F4234295ECDF8001B92DA /* HomeViewController.swift in Sources */,
 				C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */,
 				C969861C295DE94D00C542C5 /* UserInfo.swift in Sources */,
 				C9698600295D88A600C542C5 /* SceneDelegate.swift in Sources */,
