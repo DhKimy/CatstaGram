@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sef-GX-SD1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ha-oY-4VS">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -270,7 +270,7 @@
         <!--Home-->
         <scene sceneID="Y7y-NN-nhv">
             <objects>
-                <viewController id="eYm-Df-5DY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="eYm-Df-5DY" customClass="HomeViewController" customModule="CatstaGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qOk-LP-mP4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,17 +329,28 @@
                                     <constraint firstAttribute="bottom" secondItem="6md-4V-YA7" secondAttribute="bottom" constant="10" id="uhd-AM-NGP"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-cE-jlR">
+                                <rect key="frame" x="0.0" y="93" width="390" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eqa-BK-PWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Eqa-BK-PWS" firstAttribute="trailing" secondItem="7pf-cE-jlR" secondAttribute="trailing" id="Ax1-Pb-0zB"/>
                             <constraint firstItem="kab-8f-dYG" firstAttribute="leading" secondItem="Eqa-BK-PWS" secondAttribute="leading" id="BhK-yP-tIy"/>
                             <constraint firstItem="Eqa-BK-PWS" firstAttribute="trailing" secondItem="kab-8f-dYG" secondAttribute="trailing" id="PfM-Zr-vfb"/>
                             <constraint firstItem="kab-8f-dYG" firstAttribute="centerX" secondItem="qOk-LP-mP4" secondAttribute="centerX" id="cuY-IA-Z1c"/>
+                            <constraint firstItem="7pf-cE-jlR" firstAttribute="top" secondItem="kab-8f-dYG" secondAttribute="bottom" id="evj-mu-BuO"/>
+                            <constraint firstItem="7pf-cE-jlR" firstAttribute="leading" secondItem="Eqa-BK-PWS" secondAttribute="leading" id="fSw-jw-ZYe"/>
                             <constraint firstItem="kab-8f-dYG" firstAttribute="top" secondItem="Eqa-BK-PWS" secondAttribute="top" id="kAc-fc-tFa"/>
+                            <constraint firstItem="Eqa-BK-PWS" firstAttribute="bottom" secondItem="7pf-cE-jlR" secondAttribute="bottom" id="tlH-b9-4VO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="Wz5-mb-xnR"/>
+                    <connections>
+                        <outlet property="tableView" destination="7pf-cE-jlR" id="OWp-Eo-c5v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PP8-e8-21J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
