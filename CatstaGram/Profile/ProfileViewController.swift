@@ -27,21 +27,36 @@ class ProfileViewController: UIViewController {
     
     // MARK: Helpers
     private func setupCollectionView() {
+        // delegate 연결
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
+        
+        // cell 등록
+        profileCollectionView.register(
+            UINib(
+                nibName: "ProfileCollectionViewCell",
+                bundle: nil),
+            forCellWithReuseIdentifier: ProfileCollectionViewCell.identifier
+        )
+        profileCollectionView.reloadData()
     }
 
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
-extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath) as? ProfileCollectionViewCell else { return UICollectionViewCell() }
+        
+        return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 160)
+    }
     
 }
