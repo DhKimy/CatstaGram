@@ -251,17 +251,52 @@
             </objects>
             <point key="canvasLocation" x="886.15384615384608" y="-28.436018957345969"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="hol-my-ID6">
             <objects>
-                <viewController id="1Qd-Uk-s0A" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="1Qd-Uk-s0A" customClass="ProfileViewController" customModule="CatstaGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cHk-eB-sPm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DCy-nw-3Kt">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y0u-Cs-ANX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qvk-g6-npG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DCy-nw-3Kt" firstAttribute="top" secondItem="qvk-g6-npG" secondAttribute="top" id="4yO-z4-EXn"/>
+                            <constraint firstItem="qvk-g6-npG" firstAttribute="bottom" secondItem="DCy-nw-3Kt" secondAttribute="bottom" id="5Hq-cd-aZR"/>
+                            <constraint firstItem="DCy-nw-3Kt" firstAttribute="leading" secondItem="qvk-g6-npG" secondAttribute="leading" id="jcL-kK-Jc3"/>
+                            <constraint firstItem="qvk-g6-npG" firstAttribute="trailing" secondItem="DCy-nw-3Kt" secondAttribute="trailing" id="rpa-bM-TJW"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Ue-yL-r0c"/>
+                    <navigationItem key="navigationItem" id="9Ue-yL-r0c">
+                        <barButtonItem key="leftBarButtonItem" title="Nickname" id="it2-tx-Gfg">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="line.3.horizontal" catalog="system" width="5" id="9AO-Qp-MgR">
+                                <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem style="plain" systemItem="add" id="Z7o-RI-pSS">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileCollectionView" destination="DCy-nw-3Kt" id="c1p-yc-bzu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1J-Gi-hW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -785,6 +820,7 @@
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <namedColor name="disabledButtonColor">
             <color red="0.77647058823529413" green="0.87058823529411766" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

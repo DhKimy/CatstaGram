@@ -28,6 +28,8 @@
 		C97BCE18295EE41200D6E580 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97BCE16295EE41200D6E580 /* StoryCollectionViewCell.swift */; };
 		C97BCE19295EE41200D6E580 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BCE17295EE41200D6E580 /* StoryCollectionViewCell.xib */; };
 		C97BCE1C295F072B00D6E580 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97BCE1B295F072B00D6E580 /* ProfileViewController.swift */; };
+		C97BCE20295F0A5100D6E580 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97BCE1E295F0A5100D6E580 /* ProfileCollectionViewCell.swift */; };
+		C97BCE21295F0A5100D6E580 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BCE1F295F0A5100D6E580 /* ProfileCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		C97BCE16295EE41200D6E580 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C97BCE17295EE41200D6E580 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		C97BCE1B295F072B00D6E580 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C97BCE1E295F0A5100D6E580 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		C97BCE1F295F0A5100D6E580 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C95F4232295ECDE8001B92DA /* New Group */ = {
+		C95F4232295ECDE8001B92DA /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				C95F4235295ED203001B92DA /* Cell */,
 				C95F4233295ECDF8001B92DA /* HomeViewController.swift */,
 			);
-			path = "New Group";
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C95F4235295ED203001B92DA /* Cell */ = {
@@ -108,7 +112,7 @@
 		C96985FC295D88A600C542C5 /* CatstaGram */ = {
 			isa = PBXGroup;
 			children = (
-				C95F4232295ECDE8001B92DA /* New Group */,
+				C95F4232295ECDE8001B92DA /* Home */,
 				C96985FD295D88A600C542C5 /* AppDelegate.swift */,
 				C97BCE1A295F070000D6E580 /* Profile */,
 				C9698615295DCD1500C542C5 /* Color+Extension.swift */,
@@ -131,9 +135,19 @@
 		C97BCE1A295F070000D6E580 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C97BCE1D295F0A2300D6E580 /* Cell */,
 				C97BCE1B295F072B00D6E580 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		C97BCE1D295F0A2300D6E580 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C97BCE1E295F0A5100D6E580 /* ProfileCollectionViewCell.swift */,
+				C97BCE1F295F0A5100D6E580 /* ProfileCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +211,7 @@
 				C969860A295D88A800C542C5 /* LaunchScreen.storyboard in Resources */,
 				C95F423B295ED259001B92DA /* FeedTableViewCell.xib in Resources */,
 				C9698607295D88A800C542C5 /* Assets.xcassets in Resources */,
+				C97BCE21295F0A5100D6E580 /* ProfileCollectionViewCell.xib in Resources */,
 				C97BCE15295EE17400D6E580 /* StoryTableViewCell.xib in Resources */,
 				C97BCE19295EE41200D6E580 /* StoryCollectionViewCell.xib in Resources */,
 				C9698605295D88A600C542C5 /* Main.storyboard in Resources */,
@@ -212,6 +227,7 @@
 			files = (
 				C969861E295DF44800C542C5 /* TestViewController.swift in Sources */,
 				C95F423A295ED259001B92DA /* FeedTableViewCell.swift in Sources */,
+				C97BCE20295F0A5100D6E580 /* ProfileCollectionViewCell.swift in Sources */,
 				C969861A295DD4CE00C542C5 /* UIViewController+Extension.swift in Sources */,
 				C9698612295D91CB00C542C5 /* LoginViewController.swift in Sources */,
 				C9698618295DD3CD00C542C5 /* UIView+Extension.swift in Sources */,
