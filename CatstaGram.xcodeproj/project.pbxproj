@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C95F4234295ECDF8001B92DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95F4233295ECDF8001B92DA /* HomeViewController.swift */; };
+		C95F423A295ED259001B92DA /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95F4238295ED259001B92DA /* FeedTableViewCell.swift */; };
+		C95F423B295ED259001B92DA /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95F4239295ED259001B92DA /* FeedTableViewCell.xib */; };
 		C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96985FD295D88A600C542C5 /* AppDelegate.swift */; };
 		C9698600295D88A600C542C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96985FF295D88A600C542C5 /* SceneDelegate.swift */; };
 		C9698602295D88A600C542C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9698601295D88A600C542C5 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		C95F4233295ECDF8001B92DA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C95F4238295ED259001B92DA /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		C95F4239295ED259001B92DA /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		C96985FA295D88A600C542C5 /* CatstaGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatstaGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96985FD295D88A600C542C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96985FF295D88A600C542C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +60,19 @@
 		C95F4232295ECDE8001B92DA /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				C95F4235295ED203001B92DA /* Cell */,
 				C95F4233295ECDF8001B92DA /* HomeViewController.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C95F4235295ED203001B92DA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C95F4238295ED259001B92DA /* FeedTableViewCell.swift */,
+				C95F4239295ED259001B92DA /* FeedTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C96985F1295D88A600C542C5 = {
@@ -158,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C969860A295D88A800C542C5 /* LaunchScreen.storyboard in Resources */,
+				C95F423B295ED259001B92DA /* FeedTableViewCell.xib in Resources */,
 				C9698607295D88A800C542C5 /* Assets.xcassets in Resources */,
 				C9698605295D88A600C542C5 /* Main.storyboard in Resources */,
 			);
@@ -171,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C969861E295DF44800C542C5 /* TestViewController.swift in Sources */,
+				C95F423A295ED259001B92DA /* FeedTableViewCell.swift in Sources */,
 				C969861A295DD4CE00C542C5 /* UIViewController+Extension.swift in Sources */,
 				C9698612295D91CB00C542C5 /* LoginViewController.swift in Sources */,
 				C9698618295DD3CD00C542C5 /* UIView+Extension.swift in Sources */,
