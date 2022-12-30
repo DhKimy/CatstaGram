@@ -21,9 +21,9 @@ class FeedTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageViewUserProfile.layer.cornerRadius = 22.5
+        imageViewUserProfile.layer.cornerRadius = 12.5
         imageViewUserProfile.clipsToBounds = true // 내부 이미지도 같이 cornerRadius 적용(자르기)
-        imageViewMyProfile.layer.cornerRadius = 22.5
+        imageViewMyProfile.layer.cornerRadius = 12.5
         imageViewMyProfile.clipsToBounds = true
         
         let fontSize = UIFont.boldSystemFont(ofSize: 9)

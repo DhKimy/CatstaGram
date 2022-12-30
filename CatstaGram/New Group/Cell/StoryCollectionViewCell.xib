@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="StoryCollectionViewCell" reuseIdentifier="StoryCollectionViewCell" id="gTV-IL-0wX" customClass="StoryCollectionViewCell" customModule="CatstaGram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="227"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="227"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5er-Je-JtR">
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="227"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SFp-PT-gPs">
+                                <rect key="frame" x="101" y="2" width="44" height="40.666666666666671"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="edx-qN-eCk"/>
+                                    <constraint firstAttribute="height" constant="44" id="rLR-Va-hRB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghc-OQ-VoC">
+                                <rect key="frame" x="100.66666666666667" y="45" width="45.000000000000014" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="e3a-g4-y0V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SFp-PT-gPs" firstAttribute="top" secondItem="5er-Je-JtR" secondAttribute="top" id="5Pg-Dr-thO"/>
+                            <constraint firstItem="ghc-OQ-VoC" firstAttribute="top" secondItem="SFp-PT-gPs" secondAttribute="bottom" constant="1" id="9kb-Yc-Ig1"/>
+                            <constraint firstItem="ghc-OQ-VoC" firstAttribute="width" secondItem="SFp-PT-gPs" secondAttribute="width" multiplier="1.02273" id="AQM-GV-I5V"/>
+                            <constraint firstItem="ghc-OQ-VoC" firstAttribute="centerX" secondItem="SFp-PT-gPs" secondAttribute="centerX" id="AwS-rb-fy9"/>
+                            <constraint firstItem="SFp-PT-gPs" firstAttribute="centerX" secondItem="5er-Je-JtR" secondAttribute="centerX" id="udP-ii-tUP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5er-Je-JtR" secondAttribute="bottom" id="9m6-dM-reD"/>
+                <constraint firstAttribute="trailing" secondItem="5er-Je-JtR" secondAttribute="trailing" id="LYw-Nd-88o"/>
+                <constraint firstItem="5er-Je-JtR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tfp-3K-ftY"/>
+                <constraint firstItem="5er-Je-JtR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hpp-fe-A6l"/>
+            </constraints>
+            <size key="customSize" width="246" height="227"/>
+            <connections>
+                <outlet property="imageViewUserProfile" destination="SFp-PT-gPs" id="hLZ-n6-Sxd"/>
+                <outlet property="labelUsername" destination="ghc-OQ-VoC" id="zGD-Hj-pTj"/>
+            </connections>
+            <point key="canvasLocation" x="172.30769230769229" y="51.540284360189574"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
+</document>
