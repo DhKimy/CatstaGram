@@ -395,6 +395,44 @@
             </objects>
             <point key="canvasLocation" x="-778.46153846153845" y="1699.7630331753553"/>
         </scene>
+        <!--릴스-->
+        <scene sceneID="aDC-3U-Mlf">
+            <objects>
+                <viewController storyboardIdentifier="ReelsViewController" id="4pB-Nj-Kz6" customClass="ReelsViewController" customModule="CatstaGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJY-2b-pV4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Npv-XV-fiC">
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Aab-ul-KL1">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sNh-tG-Wvd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sNh-tG-Wvd" firstAttribute="bottom" secondItem="Npv-XV-fiC" secondAttribute="bottom" id="Ftw-A4-OA8"/>
+                            <constraint firstItem="Npv-XV-fiC" firstAttribute="top" secondItem="sNh-tG-Wvd" secondAttribute="top" id="PUw-Gb-DUO"/>
+                            <constraint firstItem="sNh-tG-Wvd" firstAttribute="trailing" secondItem="Npv-XV-fiC" secondAttribute="trailing" id="Tea-MH-Fjr"/>
+                            <constraint firstItem="Npv-XV-fiC" firstAttribute="leading" secondItem="sNh-tG-Wvd" secondAttribute="leading" id="nld-u4-DlW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" image="video.badge.ellipsis" catalog="system" id="1RL-Ek-lTY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Npv-XV-fiC" id="kOF-ee-Laj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdA-jP-K75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="1700"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PaZ-UD-qjD">
             <objects>
@@ -407,6 +445,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="eYm-Df-5DY" kind="relationship" relationship="viewControllers" id="M9z-UX-36f"/>
+                        <segue destination="4pB-Nj-Kz6" kind="relationship" relationship="viewControllers" id="MBg-PY-xx4"/>
                         <segue destination="PQi-Kl-ZHr" kind="relationship" relationship="viewControllers" id="Ot3-aI-VWf"/>
                     </connections>
                 </tabBarController>
@@ -830,6 +869,7 @@
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="video.badge.ellipsis" catalog="system" width="128" height="92"/>
         <namedColor name="disabledButtonColor">
             <color red="0.77647058823529413" green="0.87058823529411766" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

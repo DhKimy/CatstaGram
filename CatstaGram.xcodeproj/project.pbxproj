@@ -42,6 +42,9 @@
 		C9B3EE36296844100088DC93 /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE35296844100088DC93 /* UserFeedModel.swift */; };
 		C9B3EE3829684F3E0088DC93 /* UserFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE3729684F3E0088DC93 /* UserFeedDataManager.swift */; };
 		C9B3EE3B29685C750088DC93 /* DeleteUserFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE3A29685C750088DC93 /* DeleteUserFeed.swift */; };
+		C9B3EE3F296866270088DC93 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE3E296866270088DC93 /* ReelsViewController.swift */; };
+		C9B3EE42296866AC0088DC93 /* ReelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE40296866AC0088DC93 /* ReelsCollectionViewCell.swift */; };
+		C9B3EE43296866AC0088DC93 /* ReelsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B3EE41296866AC0088DC93 /* ReelsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +86,9 @@
 		C9B3EE35296844100088DC93 /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
 		C9B3EE3729684F3E0088DC93 /* UserFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedDataManager.swift; sourceTree = "<group>"; };
 		C9B3EE3A29685C750088DC93 /* DeleteUserFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserFeed.swift; sourceTree = "<group>"; };
+		C9B3EE3E296866270088DC93 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		C9B3EE40296866AC0088DC93 /* ReelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C9B3EE41296866AC0088DC93 /* ReelsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReelsCollectionViewCell.xib; sourceTree = "<group>"; };
 		EC59647A72DD950D1E6C98E7 /* Pods-CatstaGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstaGram.release.xcconfig"; path = "Target Support Files/Pods-CatstaGram/Pods-CatstaGram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,9 +180,7 @@
 				C96985FF295D88A600C542C5 /* SceneDelegate.swift */,
 				C9698601295D88A600C542C5 /* ViewController.swift */,
 				C9B3EE33296840A20088DC93 /* UserInterface */,
-				C9698617295DD3CD00C542C5 /* UIView+Extension.swift */,
-				C9698615295DCD1500C542C5 /* Color+Extension.swift */,
-				C9698619295DD4CE00C542C5 /* UIViewController+Extension.swift */,
+				C9B3EE3C29685FAB0088DC93 /* Extension */,
 				C969861B295DE94D00C542C5 /* UserInfo.swift */,
 				C969861D295DF44800C542C5 /* TestViewController.swift */,
 				C9698603295D88A600C542C5 /* Main.storyboard */,
@@ -240,8 +244,9 @@
 			isa = PBXGroup;
 			children = (
 				C95F4232295ECDE8001B92DA /* Home */,
-				C97BCE1A295F070000D6E580 /* Profile */,
 				C9B3EE3229683EFD0088DC93 /* Authentication */,
+				C97BCE1A295F070000D6E580 /* Profile */,
+				C9B3EE3D296865BC0088DC93 /* Reels */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -261,6 +266,34 @@
 				C9B3EE3A29685C750088DC93 /* DeleteUserFeed.swift */,
 			);
 			path = DeleteUserFeed;
+			sourceTree = "<group>";
+		};
+		C9B3EE3C29685FAB0088DC93 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C9698619295DD4CE00C542C5 /* UIViewController+Extension.swift */,
+				C9698615295DCD1500C542C5 /* Color+Extension.swift */,
+				C9698617295DD3CD00C542C5 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C9B3EE3D296865BC0088DC93 /* Reels */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3EE3E296866270088DC93 /* ReelsViewController.swift */,
+				C9B3EE45296866BE0088DC93 /* Cell */,
+			);
+			path = Reels;
+			sourceTree = "<group>";
+		};
+		C9B3EE45296866BE0088DC93 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3EE40296866AC0088DC93 /* ReelsCollectionViewCell.swift */,
+				C9B3EE41296866AC0088DC93 /* ReelsCollectionViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +363,7 @@
 				C97BCE21295F0A5100D6E580 /* ProfileCollectionViewCell.xib in Resources */,
 				C97BCE15295EE17400D6E580 /* StoryTableViewCell.xib in Resources */,
 				C97BCE19295EE41200D6E580 /* StoryCollectionViewCell.xib in Resources */,
+				C9B3EE43296866AC0088DC93 /* ReelsCollectionViewCell.xib in Resources */,
 				C9698605295D88A600C542C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,8 +431,10 @@
 				C9698616295DCD1500C542C5 /* Color+Extension.swift in Sources */,
 				C95F4234295ECDF8001B92DA /* HomeViewController.swift in Sources */,
 				C97BCE14295EE17400D6E580 /* StoryTableViewCell.swift in Sources */,
+				C9B3EE42296866AC0088DC93 /* ReelsCollectionViewCell.swift in Sources */,
 				C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */,
 				C959E9C12968319300FA0944 /* FeedDataManager.swift in Sources */,
+				C9B3EE3F296866270088DC93 /* ReelsViewController.swift in Sources */,
 				C9B3EE2F29683B410088DC93 /* FeedUploadModel.swift in Sources */,
 				C97BCE25295F1AAA00D6E580 /* PostCollectionViewCell.swift in Sources */,
 				C969861C295DE94D00C542C5 /* UserInfo.swift in Sources */,
