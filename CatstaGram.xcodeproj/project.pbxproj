@@ -39,6 +39,9 @@
 		C9B3EE2D29683B080088DC93 /* FeedUploadInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE2C29683B080088DC93 /* FeedUploadInput.swift */; };
 		C9B3EE2F29683B410088DC93 /* FeedUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE2E29683B410088DC93 /* FeedUploadModel.swift */; };
 		C9B3EE3129683BC00088DC93 /* FeedUploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE3029683BC00088DC93 /* FeedUploadDataManager.swift */; };
+		C9B3EE36296844100088DC93 /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE35296844100088DC93 /* UserFeedModel.swift */; };
+		C9B3EE3829684F3E0088DC93 /* UserFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE3729684F3E0088DC93 /* UserFeedDataManager.swift */; };
+		C9B3EE3B29685C750088DC93 /* DeleteUserFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE3A29685C750088DC93 /* DeleteUserFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		C9B3EE2C29683B080088DC93 /* FeedUploadInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadInput.swift; sourceTree = "<group>"; };
 		C9B3EE2E29683B410088DC93 /* FeedUploadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadModel.swift; sourceTree = "<group>"; };
 		C9B3EE3029683BC00088DC93 /* FeedUploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadDataManager.swift; sourceTree = "<group>"; };
+		C9B3EE35296844100088DC93 /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
+		C9B3EE3729684F3E0088DC93 /* UserFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedDataManager.swift; sourceTree = "<group>"; };
+		C9B3EE3A29685C750088DC93 /* DeleteUserFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserFeed.swift; sourceTree = "<group>"; };
 		EC59647A72DD950D1E6C98E7 /* Pods-CatstaGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstaGram.release.xcconfig"; path = "Target Support Files/Pods-CatstaGram/Pods-CatstaGram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +190,8 @@
 		C97BCE1A295F070000D6E580 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3EE3929685C550088DC93 /* DeleteUserFeed */,
+				C9B3EE34296843EF0088DC93 /* UserFeedDataManager */,
 				C97BCE1D295F0A2300D6E580 /* Cell */,
 				C97BCE1B295F072B00D6E580 /* ProfileViewController.swift */,
 			);
@@ -236,6 +244,23 @@
 				C9B3EE3229683EFD0088DC93 /* Authentication */,
 			);
 			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		C9B3EE34296843EF0088DC93 /* UserFeedDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3EE35296844100088DC93 /* UserFeedModel.swift */,
+				C9B3EE3729684F3E0088DC93 /* UserFeedDataManager.swift */,
+			);
+			path = UserFeedDataManager;
+			sourceTree = "<group>";
+		};
+		C9B3EE3929685C550088DC93 /* DeleteUserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3EE3A29685C750088DC93 /* DeleteUserFeed.swift */,
+			);
+			path = DeleteUserFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C969861E295DF44800C542C5 /* TestViewController.swift in Sources */,
+				C9B3EE3B29685C750088DC93 /* DeleteUserFeed.swift in Sources */,
 				C959E9BF2968316100FA0944 /* FeedModel.swift in Sources */,
 				C95F423A295ED259001B92DA /* FeedTableViewCell.swift in Sources */,
 				C97BCE20295F0A5100D6E580 /* ProfileCollectionViewCell.swift in Sources */,
@@ -376,9 +402,11 @@
 				C9B3EE2F29683B410088DC93 /* FeedUploadModel.swift in Sources */,
 				C97BCE25295F1AAA00D6E580 /* PostCollectionViewCell.swift in Sources */,
 				C969861C295DE94D00C542C5 /* UserInfo.swift in Sources */,
+				C9B3EE36296844100088DC93 /* UserFeedModel.swift in Sources */,
 				C97BCE1C295F072B00D6E580 /* ProfileViewController.swift in Sources */,
 				C9B3EE2D29683B080088DC93 /* FeedUploadInput.swift in Sources */,
 				C97BCE18295EE41200D6E580 /* StoryCollectionViewCell.swift in Sources */,
+				C9B3EE3829684F3E0088DC93 /* UserFeedDataManager.swift in Sources */,
 				C9698600295D88A600C542C5 /* SceneDelegate.swift in Sources */,
 				C959E9BD296830F800FA0944 /* FeedAPIInput.swift in Sources */,
 			);

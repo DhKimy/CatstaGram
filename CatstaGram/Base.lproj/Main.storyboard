@@ -384,7 +384,9 @@
                             <constraint firstItem="Eqa-BK-PWS" firstAttribute="bottom" secondItem="7pf-cE-jlR" secondAttribute="bottom" id="tlH-b9-4VO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Wz5-mb-xnR"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="Wz5-mb-xnR">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="7pf-cE-jlR" id="OWp-Eo-c5v"/>
                     </connections>
@@ -401,6 +403,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="eYm-Df-5DY" kind="relationship" relationship="viewControllers" id="M9z-UX-36f"/>
@@ -799,7 +802,9 @@
         <scene sceneID="v0T-h2-Vm8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PQi-Kl-ZHr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="dVe-5j-DVk"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="dVe-5j-DVk">
+                        <color key="badgeColor" name="facebookColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5v9-Mo-ygW">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -818,11 +823,13 @@
     <resources>
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <namedColor name="disabledButtonColor">
             <color red="0.77647058823529413" green="0.87058823529411766" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
