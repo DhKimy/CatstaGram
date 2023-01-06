@@ -11,6 +11,7 @@ class ReelsViewController: UIViewController {
 
     // MARK: - Properties
     @IBOutlet weak var collectionView: UICollectionView!
+    private var nowPage = 0
     
     private let videoURLStrArray = ["dummy", "dummy2"]
     
@@ -28,11 +29,33 @@ class ReelsViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.decelerationRate = .fast
         collectionView.register(
             ReelsCollectionViewCell.self,
             forCellWithReuseIdentifier: ReelsCollectionViewCell.identifier)
+        
+        starLoop()
+    }
+    
+    private func starLoop() {
+        let _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
+            self.moveNextPage()
+        }
+    }
+    
+    private func moveNextPage() {
+        let itemCount = collectionView.numberOfItems(inSection: 0)
+        
+        nowPage += 1
+        if nowPage >= itemCount {
+            nowPage = 0
+        }
+        
+        collectionView.scrollToItem(at: IndexPath(item: nowPage, section: 0), at: .centeredVertically, animated: true)
+        
     }
 }
+
 
 extension ReelsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -43,6 +66,13 @@ extension ReelsViewController: UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReelsCollectionViewCell.identifier, for: indexPath) as? ReelsCollectionViewCell else { fatalError() }
         cell.setupURL(videoURLStrArray.randomElement()!)
         return cell
+    }
+    
+    // 지나간 릴스의 영상을 재생하지 않기 위한 부분
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? ReelsCollectionViewCell {
+            cell.videoView?.cleanup()
+        }
     }
 }
 
