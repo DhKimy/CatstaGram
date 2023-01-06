@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var arrayCat: [FeedModel] = []
+    
+    let imagePickerViewController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +29,17 @@ class HomeViewController: UIViewController {
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
         
+        // API 수신
+        let input = FeedAPIInput(limit: 10, page: 0)
+        FeedDataManager().feedDataManager(input, self)
+        
+        imagePickerViewController.delegate = self
     }
     
+    @IBAction func buttonGoAlbum(_ sender: UIButton) {
+        self.imagePickerViewController.sourceType = .photoLibrary
+        self.present(imagePickerViewController, animated: true, completion: nil)
+    }
     
 
 }
@@ -35,7 +48,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 한 섹션에 몇 개의 셀을 넣을 것인지
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrayCat.count + 1
     }
     
     // 어떤 셀을 보여줄 것인가
@@ -47,7 +60,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else {
                 return UITableViewCell()
             }
-            cell.selectionStyle = .none
+            if let urlString = arrayCat[indexPath.row - 1].url {
+                let url = URL(string: urlString)
+                cell.imageViewFeed.kf.setImage(with: url)
+            }
+//            cell.selectionStyle = .none
             return cell
         }
     }
@@ -84,6 +101,21 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 50, height: 60)
     }
-    
+}
+
+extension HomeViewController {
+    func successAPI(_ result: [FeedModel]) {
+        arrayCat = result
+        tableView.reloadData()
+    }
+}
+
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            print(image)
+        }
+                        
+    }
     
 }

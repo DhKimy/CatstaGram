@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6127CE3E0501AE1A12E802CB /* Pods_CatstaGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3612D86F5F283A571C8EEF4 /* Pods_CatstaGram.framework */; };
 		C959E9BD296830F800FA0944 /* FeedAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C959E9BC296830F800FA0944 /* FeedAPIInput.swift */; };
+		C959E9BF2968316100FA0944 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C959E9BE2968316100FA0944 /* FeedModel.swift */; };
+		C959E9C12968319300FA0944 /* FeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C959E9C02968319300FA0944 /* FeedDataManager.swift */; };
 		C95F4234295ECDF8001B92DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95F4233295ECDF8001B92DA /* HomeViewController.swift */; };
 		C95F423A295ED259001B92DA /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95F4238295ED259001B92DA /* FeedTableViewCell.swift */; };
 		C95F423B295ED259001B92DA /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95F4239295ED259001B92DA /* FeedTableViewCell.xib */; };
@@ -40,6 +42,8 @@
 		836CBC1621DA35AD0233812F /* Pods-CatstaGram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstaGram.debug.xcconfig"; path = "Target Support Files/Pods-CatstaGram/Pods-CatstaGram.debug.xcconfig"; sourceTree = "<group>"; };
 		C3612D86F5F283A571C8EEF4 /* Pods_CatstaGram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatstaGram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C959E9BC296830F800FA0944 /* FeedAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPIInput.swift; sourceTree = "<group>"; };
+		C959E9BE2968316100FA0944 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		C959E9C02968319300FA0944 /* FeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataManager.swift; sourceTree = "<group>"; };
 		C95F4233295ECDF8001B92DA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C95F4238295ED259001B92DA /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		C95F4239295ED259001B92DA /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				C959E9BC296830F800FA0944 /* FeedAPIInput.swift */,
+				C959E9BE2968316100FA0944 /* FeedModel.swift */,
+				C959E9C02968319300FA0944 /* FeedDataManager.swift */,
 			);
 			path = FeedDataManager;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C969861E295DF44800C542C5 /* TestViewController.swift in Sources */,
+				C959E9BF2968316100FA0944 /* FeedModel.swift in Sources */,
 				C95F423A295ED259001B92DA /* FeedTableViewCell.swift in Sources */,
 				C97BCE20295F0A5100D6E580 /* ProfileCollectionViewCell.swift in Sources */,
 				C969861A295DD4CE00C542C5 /* UIViewController+Extension.swift in Sources */,
@@ -331,6 +338,7 @@
 				C95F4234295ECDF8001B92DA /* HomeViewController.swift in Sources */,
 				C97BCE14295EE17400D6E580 /* StoryTableViewCell.swift in Sources */,
 				C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */,
+				C959E9C12968319300FA0944 /* FeedDataManager.swift in Sources */,
 				C97BCE25295F1AAA00D6E580 /* PostCollectionViewCell.swift in Sources */,
 				C969861C295DE94D00C542C5 /* UserInfo.swift in Sources */,
 				C97BCE1C295F072B00D6E580 /* ProfileViewController.swift in Sources */,
