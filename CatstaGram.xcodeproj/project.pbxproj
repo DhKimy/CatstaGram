@@ -36,6 +36,9 @@
 		C97BCE21295F0A5100D6E580 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BCE1F295F0A5100D6E580 /* ProfileCollectionViewCell.xib */; };
 		C97BCE25295F1AAA00D6E580 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97BCE23295F1AAA00D6E580 /* PostCollectionViewCell.swift */; };
 		C97BCE26295F1AAA00D6E580 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97BCE24295F1AAA00D6E580 /* PostCollectionViewCell.xib */; };
+		C9B3EE2D29683B080088DC93 /* FeedUploadInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE2C29683B080088DC93 /* FeedUploadInput.swift */; };
+		C9B3EE2F29683B410088DC93 /* FeedUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE2E29683B410088DC93 /* FeedUploadModel.swift */; };
+		C9B3EE3129683BC00088DC93 /* FeedUploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3EE3029683BC00088DC93 /* FeedUploadDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		C97BCE1F295F0A5100D6E580 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		C97BCE23295F1AAA00D6E580 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		C97BCE24295F1AAA00D6E580 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		C9B3EE2C29683B080088DC93 /* FeedUploadInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadInput.swift; sourceTree = "<group>"; };
+		C9B3EE2E29683B410088DC93 /* FeedUploadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadModel.swift; sourceTree = "<group>"; };
+		C9B3EE3029683BC00088DC93 /* FeedUploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadDataManager.swift; sourceTree = "<group>"; };
 		EC59647A72DD950D1E6C98E7 /* Pods-CatstaGram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatstaGram.release.xcconfig"; path = "Target Support Files/Pods-CatstaGram/Pods-CatstaGram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +122,7 @@
 		C95F4232295ECDE8001B92DA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3EE2B29683ADC0088DC93 /* FeedUploadDataManager */,
 				C959E9BB296830DD00FA0944 /* FeedDataManager */,
 				C95F4235295ED203001B92DA /* Cell */,
 				C95F4233295ECDF8001B92DA /* HomeViewController.swift */,
@@ -157,17 +164,14 @@
 		C96985FC295D88A600C542C5 /* CatstaGram */ = {
 			isa = PBXGroup;
 			children = (
-				C95F4232295ECDE8001B92DA /* Home */,
 				C96985FD295D88A600C542C5 /* AppDelegate.swift */,
-				C97BCE1A295F070000D6E580 /* Profile */,
-				C9698615295DCD1500C542C5 /* Color+Extension.swift */,
-				C9698617295DD3CD00C542C5 /* UIView+Extension.swift */,
-				C9698619295DD4CE00C542C5 /* UIViewController+Extension.swift */,
 				C96985FF295D88A600C542C5 /* SceneDelegate.swift */,
-				C969861B295DE94D00C542C5 /* UserInfo.swift */,
 				C9698601295D88A600C542C5 /* ViewController.swift */,
-				C9698611295D91CB00C542C5 /* LoginViewController.swift */,
-				C9698613295D950800C542C5 /* SignupViewController.swift */,
+				C9B3EE33296840A20088DC93 /* UserInterface */,
+				C9698617295DD3CD00C542C5 /* UIView+Extension.swift */,
+				C9698615295DCD1500C542C5 /* Color+Extension.swift */,
+				C9698619295DD4CE00C542C5 /* UIViewController+Extension.swift */,
+				C969861B295DE94D00C542C5 /* UserInfo.swift */,
 				C969861D295DF44800C542C5 /* TestViewController.swift */,
 				C9698603295D88A600C542C5 /* Main.storyboard */,
 				C9698606295D88A800C542C5 /* Assets.xcassets */,
@@ -203,6 +207,35 @@
 				C97BCE24295F1AAA00D6E580 /* PostCollectionViewCell.xib */,
 			);
 			path = PostCell;
+			sourceTree = "<group>";
+		};
+		C9B3EE2B29683ADC0088DC93 /* FeedUploadDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3EE2C29683B080088DC93 /* FeedUploadInput.swift */,
+				C9B3EE2E29683B410088DC93 /* FeedUploadModel.swift */,
+				C9B3EE3029683BC00088DC93 /* FeedUploadDataManager.swift */,
+			);
+			path = FeedUploadDataManager;
+			sourceTree = "<group>";
+		};
+		C9B3EE3229683EFD0088DC93 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C9698611295D91CB00C542C5 /* LoginViewController.swift */,
+				C9698613295D950800C542C5 /* SignupViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C9B3EE33296840A20088DC93 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				C95F4232295ECDE8001B92DA /* Home */,
+				C97BCE1A295F070000D6E580 /* Profile */,
+				C9B3EE3229683EFD0088DC93 /* Authentication */,
+			);
+			path = UserInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +363,7 @@
 				C95F423A295ED259001B92DA /* FeedTableViewCell.swift in Sources */,
 				C97BCE20295F0A5100D6E580 /* ProfileCollectionViewCell.swift in Sources */,
 				C969861A295DD4CE00C542C5 /* UIViewController+Extension.swift in Sources */,
+				C9B3EE3129683BC00088DC93 /* FeedUploadDataManager.swift in Sources */,
 				C9698612295D91CB00C542C5 /* LoginViewController.swift in Sources */,
 				C9698618295DD3CD00C542C5 /* UIView+Extension.swift in Sources */,
 				C9698602295D88A600C542C5 /* ViewController.swift in Sources */,
@@ -339,9 +373,11 @@
 				C97BCE14295EE17400D6E580 /* StoryTableViewCell.swift in Sources */,
 				C96985FE295D88A600C542C5 /* AppDelegate.swift in Sources */,
 				C959E9C12968319300FA0944 /* FeedDataManager.swift in Sources */,
+				C9B3EE2F29683B410088DC93 /* FeedUploadModel.swift in Sources */,
 				C97BCE25295F1AAA00D6E580 /* PostCollectionViewCell.swift in Sources */,
 				C969861C295DE94D00C542C5 /* UserInfo.swift in Sources */,
 				C97BCE1C295F072B00D6E580 /* ProfileViewController.swift in Sources */,
+				C9B3EE2D29683B080088DC93 /* FeedUploadInput.swift in Sources */,
 				C97BCE18295EE41200D6E580 /* StoryCollectionViewCell.swift in Sources */,
 				C9698600295D88A600C542C5 /* SceneDelegate.swift in Sources */,
 				C959E9BD296830F800FA0944 /* FeedAPIInput.swift in Sources */,
