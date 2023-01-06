@@ -28,7 +28,9 @@ class ReelsViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "ReelsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ReelsCollectionViewCell.identifier)
+        collectionView.register(
+            ReelsCollectionViewCell.self,
+            forCellWithReuseIdentifier: ReelsCollectionViewCell.identifier)
     }
 }
 
@@ -39,6 +41,7 @@ extension ReelsViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReelsCollectionViewCell.identifier, for: indexPath) as? ReelsCollectionViewCell else { fatalError() }
+        cell.setupURL(videoURLStrArray.randomElement()!)
         return cell
     }
 }
